@@ -1,0 +1,263 @@
+body {
+    background: #F3F5FC;
+    color: rgba(73, 80, 87, 1);
+    font-family: 'Inter';
+}
+
+.left-container {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    height: 70vh;
+}
+
+.right-container {
+    display: inline-block;
+    width: 20%;
+    height: 90vh;
+    margin: 4%;
+}
+
+aside {
+    background: #FFFFFF;
+    border-radius: 32px;
+    height: inherit;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* Align image center vertically within aside*/
+aside img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+aside h2 {
+    color: rgba(52, 58, 64, 1);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+header {
+    margin: 40px;
+}
+
+main {
+    margin: 80px 0 80px 5%;
+    margin-left: 15%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+#textoIngresado {
+    background: none;
+    border: none;
+    font-size: 32px;
+    font-family: 'Inter';
+    color: #0A3871;
+    margin-bottom: auto;
+    height: 100%;
+}
+
+#textoIngresado::placeholder {
+    color: #0A3871;
+}
+
+#textoIngresado:focus {
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+button {
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    font-size: 16px;
+}
+
+.button-container button {
+    width: 49%;
+}
+
+#buttonEncriptar {
+    background: rgba(10, 56, 113, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#buttonDesencriptar, #buttonCopiarResultado {
+    background: rgba(216, 223, 232, 1);
+    color: rgba(10, 56, 113, 1);
+}
+
+#resultado {
+    font-size: 24px;
+    text-align: left;
+    padding: 32px;
+    margin-bottom: auto;
+}
+
+#resultContainer{
+    display: none;
+}
+
+#resultContainer.show {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+#buttonCopiarResultado {
+    margin: 32px;
+    margin-top: auto;
+    width: -webkit-fill-available;
+}
+
+#informacionText::before {
+    content: url('img/info.svg');
+    margin-right: 8px;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:480px) {
+    header {
+        margin: 0;
+        margin-top: 24px;
+    }
+    main {
+        margin: 80px 0px;
+        height: 90vh;
+    }
+    .right-container, .left-container {
+        display: block;
+        width: 92%;
+        margin: 40px auto;
+        height: initial;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+
+    #buttonEncriptar {
+        margin-bottom: 16px;
+    }
+    
+    #buttonDesencriptar {
+        margin-top: 16px;
+    }
+
+    aside img {
+        display: none;
+    }
+
+    aside {
+        padding: 40px;
+    }
+
+    #resultado {
+        padding: 0;
+        padding-bottom: 32px;
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    header {
+        margin: 0;
+        margin-top: 24px;
+    }
+    main {
+        margin: 80px 0px;
+        height: 70vh;
+    }
+    .right-container, .left-container {
+        display: block;
+        width: 92%;
+        margin: 40px auto;
+        height: initial;
+    }
+
+
+    aside img {
+        display: none;
+    }
+
+    aside {
+        padding: 40px;
+    }
+
+    #resultado {
+        padding: 0;
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1124px) {
+    .right-container {
+        width: 35%;
+        margin: 2%;
+    }
+    .left-container {
+        width: 60%;
+    }
+    main {
+        margin: 80px 24px;
+        height: 70vh;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <header>
+                <h1><img src="img/Logo.png"></h1>
+            </header>
+            <main>
+                <textarea id="textoIngresado" placeholder="Ingrese el texto aquí"></textarea>
+                <p id="informacionText">Solo letras minúsculas y sin acentos</p>
+                <div class="button-container">
+                    <button id="buttonEncriptar" onclick="encriptar();">Encriptar</button>
+                    <button id="buttonDesencriptar" onclick="desencriptar();">Desencriptar</button>
+                </div>
+            </main>
+        </div>
+        <div class="right-container">
+            <aside>
+                <div id="noMessageContainer">
+                    <img src="img/Muñeco.png">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="resultContainer">
+                    <p id="resultado"></p>
+                    <div class="tooltip">
+                        <button id="buttonCopiarResultado" onclick="copiarAPortapapeles()" onmouseout="outFunc()">
+                            <span class="tooltiptext" id="botonCopiarTooltip">CopiarAlPortapeles</span>
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
